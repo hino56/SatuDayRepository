@@ -1,70 +1,39 @@
 #pragma once
-
-#include "Collision.h"
-
+#include"Collision.h"
 class Player
 {
 private:
+	//プレイヤーの位置
+	float x;
+	float y;
 
-    float x;
-    float y;
+	//プレイヤー移動速度
+	float velocityX;
+	float velocityY;
 
-    float velocityX;
-    float velocityY;
+	//ジャンプフラグ
+	bool isJumping;
 
-    // ジャンプ
-    bool jumpFlag;
-    bool groundFlag;
-    bool headHitFlag;
+	//プレイヤーの当たり判定
+	Collision collision;
 
+	//足元の当たり判定
+	Collision footCollision;
 
-    // ジャンプキー
-    bool previousJump;
-
-
-    // アニメーション
-    float animationTimer;
-
-    int animationType;
-    int animationPattern;
-
-
-    // 画像
-    int playerImg[3 * 4];
-
-
-    // コライダー
-    Collision collision;
-    Collision footCollision;
-    Collision headCollision;
-
+	//頭の当たり判定
+	Collision headCollision;
 
 public:
+	Player();
+	Player();
+	//初期化
+	//更新
+	//描画
 
-    void Init();
+	//マップと衝突処理
 
-    void Update(float deltaTime);
+	//Collisionの取得
 
-    void Draw();
-
-    void Finalize();
-
-
-    Collision GetCollision() const;
-
-    Collision GetFootCollision() const;
-
-    Collision GetHeadCollision() const;
-
-
-    void FixCollision(const Collision& collision);
-
-    void SetGround(bool ground);
-
-    void SetHeadHit(bool hit);
-
-
-private:
-
-    void Move(float deltaTime);
+	//座標
 };
+

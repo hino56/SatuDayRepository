@@ -1,30 +1,23 @@
 #pragma once
-
 class Collision
 {
 private:
+	float x;
+	float y;
 
-    float width;
-    float height;
-
-    float left;
-    float top;
-    float right;
-    float bottom;
-
+	float width;
+	float height;
 
 public:
+	Collision();
+	//初期化
 
-    void Init(float width, float height);
+	//位置を設定
 
-    void SetPosition(float x, float y);
+	//移動
 
-    bool IsHit(const Collision& other) const;
+	//当たり判定
 
-    void FixPosition(const Collision& other);
-
-    void Draw() const;
-
-    float GetLeft() const { return left; }
-    float GetTop() const { return top; }
+	//外から持ってくるゲッター
 };
+
