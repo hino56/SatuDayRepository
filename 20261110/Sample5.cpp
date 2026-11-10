@@ -3,14 +3,23 @@
 
 int main(void)
 {
-	Player player;
-	Enemy enemy;
+	//Player player;
+	//Enemy enemy;
 
-	Character* target = &enemy;
+	//Character* target = &enemy;
 
-	target->TakeDamage(30);
+	//target->TakeDamage(30);
 
-	enemy.ShowStutas();
+	//enemy.ShowStutas();
+
+	Enemy* enemy = new Enemy();
+
+	enemy->TakeDamage(30);
+	enemy->ShowStutas();
+
+	delete enemy;
+	enemy = nullptr;
+
 
 	return 0;
 
